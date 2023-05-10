@@ -5,7 +5,12 @@ body{
 .content-wrapper{
     padding: 10px 30px;
 }
-h1{
+.testhead{
     text-align: justify;
     color: black;
+}
+
+.testbody{
+    text-align: justify;
+    color: darkblue;
 }
