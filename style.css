@@ -103,9 +103,14 @@ div {
     flex-direction: column;
 }
 
+nav {
+    position: sticky;
+    top: 0px;
+}
+
 .container {
     width: 100%;
-    padding: 48px;
+    padding: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -130,6 +135,8 @@ div {
 }
 
 .centered {
+    padding-top: 16px;
+    padding-bottom: 16px;
     text-align: center;
     align-items: center;
 }
@@ -142,10 +149,11 @@ div {
 
 .navbar {
     font-family: 'Quicksand';
-    background-color: #471458;
+    background: rgba(79, 110, 134, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur();
     display: flex;
     justify-content: left;
-    align-items: center;
 }
 
 .navbar p {
@@ -165,12 +173,59 @@ div {
 }
 
 .navbar a:hover {
-    background-color: #96c6f9;
-    color: black;
+    /*background-color: #96f9c9;*/
+    color: rgb(64, 22, 78);
 }
 
-.navbar #logo {
-    width: 40px;
-    height: 40px;
-    justify-content: flex-start;
+
+
+/* CSS FOR PORTFOLIO PAGES */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    /*background-color: #f2f2f2;
+    border: 1px solid #ccc;*/
+    color: aliceblue;
+    background: rgba(79, 110, 134, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur();
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.project p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Add additional styles here if needed */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
