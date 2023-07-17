@@ -70,24 +70,29 @@ h6 {
 /* Generalized */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Quicksand';
     background-color: rgba(164, 89, 255, 0.418);
+    background-image: href="gradient.jpg";
 }
 
 h1 {
+    font-family: 'Merriweather', bold;
     font-size: 2rem;
     text-align: center;
 }
 
 h2 {
+    font-family: 'Merriweather', bold;
     font-size: 1.5rem;
 }
 
 h3 {
+    font-family: 'Merriweather', bold;
     font-size: 1.2rem;
 }
 
 p {
+    font-family: 'Quicksand';
     font-size: 1rem;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -136,6 +141,7 @@ div {
 }
 
 .navbar {
+    font-family: 'Quicksand';
     background-color: #471458;
     display: flex;
     justify-content: left;
