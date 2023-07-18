@@ -167,7 +167,7 @@ a:hover {
 }
 
 .navbar p {
-    padding: 0px;
+    padding: 10px;
 }
 
 .navbar-links {
@@ -179,6 +179,7 @@ a:hover {
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
+    padding: 14px 16px;
     /* Add some spacing between links */
 }
 
