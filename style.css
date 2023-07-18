@@ -149,7 +149,7 @@ nav {
 
 .navbar {
     font-family: 'Quicksand';
-    background: rgba(79, 110, 134, 0.6);
+    background: hsla(206, 26%, 42%, 0.6);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur();
     display: flex;
@@ -157,7 +157,7 @@ nav {
 }
 
 .navbar p {
-    padding: 0px;
+    padding: 10px;
 }
 
 .navbar-links {
@@ -169,6 +169,7 @@ nav {
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
+    padding: 14px 16px;
     /* Add some spacing between links */
 }
 
@@ -228,4 +229,14 @@ nav {
     .portfolio {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+
+/* CONTACT SECTION MAIN PAGE */
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
