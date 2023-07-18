@@ -108,6 +108,10 @@ nav {
     top: 0px;
 }
 
+a:hover {
+    color: rgb(118, 211, 142);
+}
+
 .container {
     width: 100%;
     padding: 40px;
@@ -137,20 +141,26 @@ nav {
 .centered {
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     align-items: center;
 }
 
 .frosted-glass {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur();
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    align-items: center;
 }
 
 .navbar {
     font-family: 'Quicksand';
-    background: rgba(79, 110, 134, 0.6);
-    backdrop-filter: blur(2px);
+    background: rgba(79, 111, 135, 0.6);
+    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur();
     display: flex;
     justify-content: left;
@@ -178,10 +188,16 @@ nav {
 }
 
 
-
 /* CSS FOR PORTFOLIO PAGES */
 
 .portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -192,12 +208,17 @@ nav {
     /*background-color: #f2f2f2;
     border: 1px solid #ccc;*/
     color: aliceblue;
-    background: rgba(79, 110, 134, 0.6);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur();
+    background: rgba(79, 111, 135, 0.6);
+    /*backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur();*/
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+}
+
+.project2 {
+    background-color: rgba(79, 111, 135, 0);
+    padding: 20px;
 }
 
 .project img {
@@ -226,6 +247,19 @@ nav {
 
 @media (max-width: 480px) {
     .portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 384px) {
+    .portfolio2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 240px) {
+    .portfolio2 {
         grid-template-columns: repeat(1, 1fr);
     }
 }
