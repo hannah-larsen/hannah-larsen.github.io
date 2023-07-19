@@ -93,7 +93,7 @@ h3 {
 
 p {
     font-family: 'Quicksand';
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-bottom: 8px;
     padding-top: 8px;
 }
@@ -130,11 +130,8 @@ a:hover {
     padding-bottom: 16px;
 }
 
-.footer {
-    text-align: center;
-}
-
 .footer p {
+    text-align: center;
     font-size: 0.9rem;
 }
 
@@ -159,7 +156,7 @@ a:hover {
 
 .navbar {
     font-family: 'Quicksand';
-    background: rgba(79, 111, 135, 0.6);
+    background: rgba(79, 111, 135, 0.8);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur();
     display: flex;
@@ -179,7 +176,6 @@ a:hover {
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
-    padding: 14px 16px;
     /* Add some spacing between links */
 }
 
@@ -205,11 +201,18 @@ a:hover {
     padding: 20px;
 }
 
+.contact {
+    padding: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
 .project {
     /*background-color: #f2f2f2;
     border: 1px solid #ccc;*/
     color: aliceblue;
-    background: rgba(79, 111, 135, 0.6);
+    background: rgba(79, 111, 135, 0.8);
     /*backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur();*/
     padding: 20px;
