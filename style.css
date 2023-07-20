@@ -106,6 +106,7 @@ div {
 nav {
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 
 a:hover {
@@ -161,6 +162,7 @@ a:hover {
     -webkit-backdrop-filter: blur();
     display: flex;
     justify-content: left;
+    z-index: 999;
 }
 
 .navbar p {
@@ -205,26 +207,26 @@ a:hover {
     position: relative;
     top: 0;
     left: 0;
-  }
-  
-  .image1 {
+}
+
+.image1 {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 2;
-  }
-  
-  .image2 {
+    z-index: 3;
+}
+
+.image2 {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 1;
-  }
+    z-index: 2;
+}
 
-  .image1:hover{
+.image1:hover {
     opacity: 0;
-    transition: opacity 2s;
-  }
+    transition: opacity 3s;
+}
 
 .contact {
     padding: 0.7rem;
