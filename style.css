@@ -201,6 +201,31 @@ a:hover {
     padding: 20px;
 }
 
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .image2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  .image1:hover{
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
 .contact {
     padding: 0.7rem;
     display: grid;
