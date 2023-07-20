@@ -109,7 +109,7 @@ nav {
 }
 
 a:hover {
-    color: rgb(118, 211, 142);
+    color: rgb(64, 118, 78);
 }
 
 .container {
@@ -206,6 +206,47 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+}
+
+.logos {
+    padding-top: 0.7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*gap: 0.1rem;*/
+}
+
+.fa-spotify:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-soundcloud:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-music:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-envelope:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-linkedin:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-file:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.logotext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem;
+    font-size: 0.3rem;
 }
 
 .project {
