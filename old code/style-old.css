@@ -1,0 +1,359 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Generalized */
+
+body {
+    font-family: 'Quicksand';
+    background-color: rgba(164, 89, 255, 0.418);
+    background-image: href="gradient.jpg";
+}
+
+h1 {
+    font-family: 'Merriweather', bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Merriweather', bold;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: 'Merriweather', bold;
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: 'Quicksand';
+    font-size: 0.9rem;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+a:hover {
+    color: rgb(64, 118, 78);
+}
+
+.container {
+    width: 100%;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    max-width: 800px;
+}
+
+.section-wide {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.centered {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur();
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar {
+    font-family: 'Quicksand';
+    font-size: larger;
+    background: rgba(79, 111, 135, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur();
+    display: flex;
+    justify-content: left;
+    z-index: 999;
+}
+
+.navbar p {
+    padding: 10px;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    /* Add some spacing between links */
+}
+
+.navbar a:hover {
+    /*background-color: #96f9c9;*/
+    color: rgb(64, 22, 78);
+}
+
+
+/* CSS FOR PORTFOLIO PAGES */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.image2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.image1:hover {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.contact {
+    padding: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.logos {
+    padding-top: 0.7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*gap: 0.1rem;*/
+}
+
+.fa-spotify:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-soundcloud:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-music:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-envelope:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-linkedin:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.fa-file:hover {
+    color: rgb(64, 118, 78) !important;
+}
+
+.logotext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem;
+    font-size: 0.3rem;
+}
+
+.project {
+    /*background-color: #f2f2f2;
+    border: 1px solid #ccc;*/
+    color: aliceblue;
+    background: rgba(79, 111, 135, 0.8);
+    /*backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur();*/
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project2 {
+    background-color: rgba(79, 111, 135, 0);
+    padding: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.project p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+/* Responsive adjustments - diff screen sizes */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .section {
+        width: 100%;
+        max-width: 600px;
+      }
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Increase font size for better visibility */
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
+    /* Add more padding to the navbar links for easier tapping on touch screens */
+    .navbar a {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+      }
+    .section {
+        max-width: 100%;
+      }
+    .portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 384px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 240px) {
+    .portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
