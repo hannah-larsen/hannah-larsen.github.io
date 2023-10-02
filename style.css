@@ -121,7 +121,7 @@ p {
     padding-bottom: 16px;
     border-bottom: 1px solid #DFBA8F;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .nav-links {
@@ -155,6 +155,10 @@ h2 {
     font-size: 480%;
 }
 
+.heading {
+    text-align: left;
+}
+
 .hannah-images {
     margin-right: 12px;
     flex: 1;
@@ -162,16 +166,14 @@ h2 {
 
 .hannah-pic {
     height: auto;
+    width: auto;
     max-width: 100%;
 }
 
 .creative-dev {
     flex: auto;
     display: inline;
-    margin-left: 60px;
-}
-
-.creative-dev {
+    margin-left: 50px;
     text-align: right;
     flex: 2;
 }
@@ -180,6 +182,54 @@ h2 {
     margin-top: 24px;
 }
 
-.title-text {
+.sound-designer {
     margin-top: 24px;
+}
+
+
+/* MEDIA TAGS FOR MOBILE SCREEN SIZE ADJUSTMENTS */
+@media only screen and (max-width: 1000px) {
+    /* Center all elements vertically and stack them */
+
+    /* Center the heading */
+    h,
+    .sound-designer {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* Center the image and maintain a constant height and width */
+    .hannah-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hannah-pic {
+        width: 400px;
+        /* Adjust the width to your desired size */
+        height: 400px;
+        /* Adjust the height to your desired size */
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Center the h2 and description text */
+    h2,
+    .description {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .body-content {
+        flex-wrap: wrap;
+        display: inline-block;
+        margin-top: 0px;
+    }
+
+    p {
+        font-size: larger
+    }
 }
