@@ -136,14 +136,37 @@ p {
     margin-left: 16px;
     display: flex;
     float: right;
+    font-size: 1.6rem;
 }
 
 .navbar a:hover {
-    font-weight: bolder;
+    color: rgb(144, 174, 119);
 }
 
 
 /* PAGE STYLES */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes nothing {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in;
+}
 
 h {
     font-family: 'Chicle', cursive;
@@ -212,7 +235,7 @@ h3 {
 
 .portfolio-text {
     margin: 16px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -223,11 +246,12 @@ h3 {
     overflow: hidden;
     position: relative;
     border-radius: 6px;
+    margin-bottom: 16px;
 }
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     background-color: #425037;
 }
@@ -259,7 +283,7 @@ h3 {
 }
 
 .portfolio-item a {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -273,19 +297,48 @@ h3 {
     background-color: #8aab81;
 }
 
+.category-links {
+    margin: 16px;
+    margin-left: 24px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-links a {
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 1.6rem;
+    padding: 4px;
+}
+
+.category-links a:hover {
+    background-color: #ba8c5857;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    
+}
+
+.contact-text {
+    margin-top: 16px;
+    margin-bottom: 0px;
+    align-items: center;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* STYLES FOR CONTACT */
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .portfolio-item {
         width: 49%;
-    }
-}
-
-/* Media query for even smaller screens */
-@media (max-width: 480px) {
-    .portfolio-item {
-        width: 100%;
     }
 }
 
@@ -298,6 +351,12 @@ h3 {
     .sound-designer {
         text-align: center;
         margin: 0 auto;
+    }
+
+    /* Increase font size and padding for better readability */
+    .navbar {
+        padding: 10px;
+        font-size: larger;
     }
 
     /* Center the image and maintain a constant height and width */
@@ -331,8 +390,8 @@ h3 {
         margin-top: 0px;
     }
 
-    navbar a {
-        font-size: larger;
+    .navbar a {
+        font-size: 2rem;
     }
 
     .icons {
@@ -341,5 +400,28 @@ h3 {
         align-items: center;
         height: 16vh;
     }
+
+    /* Increase text size for portfolio items */
+    .portfolio-text {
+        font-size: 2rem; /* Adjust the font size as needed */
+    }
+
+    /* Display one portfolio item per row on mobile */
+    .portfolio {
+        justify-content: center;
+    }
+    .portfolio-item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .portfolio-item a {
+        font-size: 2rem;
+    }
+
+    .category-links a {
+        font-size: 1.6rem;
+    }
+    
 
 }

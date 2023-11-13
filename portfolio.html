@@ -26,9 +26,15 @@
         </div>
     </nav>
 
+    <div class="category-links">
+        <a href="#" class="category-link" data-category="music">MUSIC</a>
+        <a href="#" class="category-link" data-category="design">DESIGN</a>
+        <a href="#" class="category-link" data-category="code">CODE</a>
+    </div>
+
     <div class="portfolio">
 
-        <div class="portfolio-item">
+        <div class="portfolio-item code">
             <img src="assets-new/hexcodle-screenshot.png" alt="Hexcodle">
             <div class="overlay">
                 <p class="portfolio-text">Hexcodle is a daily wordle-style game where users guess a daily randomly-generated
@@ -38,7 +44,7 @@
             </div>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item music">
             <img src="assets-new/racetrap-screenshot.png" alt="Racetrap Main Menu Audio">
             <div class="overlay">
                 <p class="portfolio-text">Audio (created by Hannah Larsen) + video demo of GnomeFire Labs' "Racetrap" game for their main menu screen. Audio
@@ -48,7 +54,7 @@
             </div>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item music">
             <img src="assets-new/racetrap-screenshot2.png" alt="Racetrap Forest Level Audio">
             <div class="overlay">
                 <p class="portfolio-text">Audio (created by Hannah Larsen) + video demo of GnomeFire Labs' "Racetrap" game for their forest level demo.
@@ -58,7 +64,7 @@
             </div>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item music">
             <img src="assets-new/mosaic-screenshot.png" alt="Queen's Mosaic Concert, February 2023">
             <div class="overlay">
                 <p class="portfolio-text">Performing my originally composed piece titled "Eminence" at the Queen's University February 2023 Mosaic Concert 
@@ -71,5 +77,92 @@
         <!-- Add more portfolio items as needed -->
 
     </div>
+
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+        portfolioItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                const overlay = item.querySelector('.overlay');
+                if (overlay.style.opacity === "0" || overlay.style.opacity === "") {
+                    overlay.style.opacity = 1;
+                } else {
+                    overlay.style.opacity = 0;
+                }
+            });
+        });
+    
+        const categoryLinks = document.querySelectorAll('.category-link');
+
+        categoryLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const selectedCategory = link.getAttribute('data-category');
+
+            // Hide all portfolio items
+            portfolioItems.forEach((item) => {
+                item.style.opacity = 0; // Hide the item
+            });
+
+            // Define the fade-in function
+            const fadeIn = (element, duration) => {
+                let opacity = 0;
+                const interval = 10; // Milliseconds
+                const increment = (interval / duration);
+                element.style.opacity = 0;
+                element.style.display = 'block';
+
+                const animate = () => {
+                    opacity += increment;
+                    if (opacity >= 1) {
+                        element.style.opacity = 1;
+                    } else {
+                        element.style.opacity = opacity;
+                        setTimeout(animate, interval);
+                    }
+                };
+
+                animate();
+            };
+
+            // Show only the items of the selected category with a fade-in effect
+            portfolioItems.forEach((item) => {
+                if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
+                    fadeIn(item, 500); // Show the item with a fade-in effect (500 milliseconds duration)
+                } else {
+                    item.style.display = 'none'; // Hide the item by setting its display to 'none'
+                }
+            });
+        });
+    });
+
+    /*
+        categoryLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const selectedCategory = link.getAttribute('data-category');
+
+                // Show/hide portfolio items based on the selected category
+                portfolioItems.forEach((item) => {
+                    if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
+                        item.style.display = 'block'; // Show the item
+                    } else {
+                        item.style.display = 'none'; // Hide the item
+                    }
+                });
+            });
+        });*/
+    </script>
+
+    <!--
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+        portfolioItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                item.querySelector('.overlay').style.opacity = 1;
+            });
+        });
+    </script> -->
     
 </body>
