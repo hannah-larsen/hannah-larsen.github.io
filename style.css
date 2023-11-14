@@ -32,6 +32,7 @@ body {
     margin-left: 48px;
     margin-right: 48px;
     min-width: 600px;
+    /*overflow: hidden;*/
 }
 
 /*
@@ -81,19 +82,10 @@ h6 {
 /* GENERAL STYLES */
 
 h1 {
-    font-family: '', bold;
-    font-size: 2rem;
+    font-family: 'Chicle', cursive;
+    font-size: 700%;
+    font-weight: 400;
     text-align: center;
-}
-
-h2 {
-    font-family: '', bold;
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-family: '', bold;
-    font-size: 1.2rem;
 }
 
 div {
@@ -150,15 +142,7 @@ p {
     0% {
         opacity: 0;
     }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes nothing {
-    0% {
-        opacity: 1;
-    }
     100% {
         opacity: 1;
     }
@@ -317,20 +301,56 @@ h3 {
     background-color: #ba8c5857;
     transition: background-color 0.3s;
     border-radius: 10px;
-    
+
+}
+
+.contact-body {
+    overflow-x: hidden;
 }
 
 .contact-text {
-    margin-top: 16px;
-    margin-bottom: 0px;
-    align-items: center;
     text-align: center;
+    margin: 16px auto;
+}
+
+.email-logo,
+.linkedin-logo,
+.soundcloud-logo,
+.spotify-logo {
+    font-size: 200%;
 }
 
 .icons {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fly-container {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+}
+
+.flying-image {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    top: 30%;
+    /* Initial vertical position */
+    left: 0;
+    /* Initial horizontal position */
+    transform: translate(-50%, -50%);
+    /* Center the image */
+    animation: flyAnimation 10s linear;
+    /* Adjust duration as needed */
+}
+
+@keyframes flyAnimation {
+    to {
+        left: 100vw;
+        /* Move to the right edge of the screen */
+    }
 }
 
 /* STYLES FOR CONTACT */
@@ -403,13 +423,15 @@ h3 {
 
     /* Increase text size for portfolio items */
     .portfolio-text {
-        font-size: 2rem; /* Adjust the font size as needed */
+        font-size: 2rem;
+        /* Adjust the font size as needed */
     }
 
     /* Display one portfolio item per row on mobile */
     .portfolio {
         justify-content: center;
     }
+
     .portfolio-item {
         width: 100%;
         margin-bottom: 16px;
@@ -422,6 +444,6 @@ h3 {
     .category-links a {
         font-size: 1.6rem;
     }
-    
+
 
 }

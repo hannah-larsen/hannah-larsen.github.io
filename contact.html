@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="contact-body">
 
     <nav class="navbar">
         <div class="nav-logo">
@@ -26,9 +26,9 @@
     </nav>
 
     <div>
-        <h class="contact-text">
+        <h1 class="contact-text">
             LETS GET IN TOUCH!
-        </h>
+        </h1>
     </div>
 
     <div class="icons">
@@ -40,13 +40,30 @@
             <i class="fab fa-linkedin fa-2x ic" style="color: #dfba8f; margin-right: 20px;"></i>
         </a>
         
-        <a href="http://soundcloud.com/larsnmusic">
+        <a class="soundcloud-logo" href="http://soundcloud.com/larsnmusic">
             <i class="fa-brands fa-soundcloud fa-2xl ic" style="color: #dfba8f; margin-right: 20px;"></i>
         </a>
 
-        <a href="https://open.spotify.com/artist/5clxb34N1D6DjJvFpG5zeP?si=YxGFXCwISuC8RQM2j9mapw">
+        <a class="spotify-logo" href="https://open.spotify.com/artist/5clxb34N1D6DjJvFpG5zeP?si=YxGFXCwISuC8RQM2j9mapw">
             <i class="fa-brands fa-spotify fa-2xl ic" style="color: #dfba8f"></i>
         </a>
     </div>    
+
+    <div class="fly-container">
+        <img class="flying-image" src="assets-new/airplane.png" alt="Flying Image">
+    </div>
+
+    <!-- THIS SCRIPT MAKES THE PAPER AIRPLANE NOT RESPAWN ONCE ITS FLOWN ACROSS THE SCREEN -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var flyingImage = document.querySelector('.flying-image');
+        
+            // Add an event listener for the animationend event
+            flyingImage.addEventListener('animationend', function () {
+                // Hide the image when the animation is complete
+                flyingImage.style.display = 'none';
+            });
+        });
+    </script>
 
 </body>
