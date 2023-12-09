@@ -401,13 +401,14 @@ h3 {
     position: relative;
     width: 100vw;
     height: 30vh;
+    margin-top: 6px;
 }
 
 .flying-image {
     height: 80px;
     width: auto;
     position: absolute;
-    top: 60%;
+    top: 90%;
     /* Initial vertical position */
     left: 0;
     /* Initial horizontal position */
