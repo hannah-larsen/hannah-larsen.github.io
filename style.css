@@ -519,7 +519,8 @@ h3 {
 
     /* Increase text size for portfolio items */
     .portfolio-text {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        max-width: 100%;
         /* Adjust the font size as needed */
     }
 
@@ -529,12 +530,15 @@ h3 {
     }
 
     .portfolio-item {
+        min-width: 40%;
         width: 100%;
+        height: auto;
         margin-bottom: 16px;
     }
 
     .portfolio-item a {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+        margin-top: 8px;
     }
 
     .category-links a {
