@@ -16,20 +16,23 @@
 
 <body>
     <nav class="navbar">
-        <div class="nav-logo">
-            <a href="index.html">HANNAH LARSEN</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
-        <div class="nav-links">
-            <a href=portfolio.html>PORTFOLIO </a>
-            <a href=contact.html>CONTACT</a>
-        </div>
+        <a class="home-link" href="index.html" style="font-size: 1.6rem; text-decoration: none;">hannah larsen</a>
+        <ul class="nav-list">
+            <li><a class="about-link" href="about.html">about</a></li>
+            <li><a class="portfolio-link" href="portfolio.html">portfolio</a></li>
+            <li><a class="contact-link" href="contact.html">contact</a></li>
+        </ul>
     </nav>
 
     <div class="category-links">
-        <a href="#" class="category-link" data-category="music">MUSIC</a>
-        <a href="#" class="category-link" data-category="design">DESIGN</a>
-        <a href="#" class="category-link" data-category="code">CODE</a>
+        <a href="#" class="category-link" data-category="music">music</a>
+        <a href="#" class="category-link" data-category="design">design</a>
+        <a href="#" class="category-link" data-category="code">code</a>
     </div>
 
     <div class="portfolio">
@@ -72,11 +75,10 @@
                 <a href="https://youtu.be/W_nURGJc8No?si=Sv1CccMyJqQlsGY0&t=580">View Project</a>
             </div>
         </div>
-
-        
         <!-- Add more portfolio items as needed -->
-
     </div>
+
+    <script src="navbar.js"></script>
 
     <script>
         const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -135,34 +137,6 @@
             });
         });
     });
-
-    /*
-        categoryLinks.forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const selectedCategory = link.getAttribute('data-category');
-
-                // Show/hide portfolio items based on the selected category
-                portfolioItems.forEach((item) => {
-                    if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
-                        item.style.display = 'block'; // Show the item
-                    } else {
-                        item.style.display = 'none'; // Hide the item
-                    }
-                });
-            });
-        });*/
     </script>
 
-    <!--
-    <script>
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-        portfolioItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                item.querySelector('.overlay').style.opacity = 1;
-            });
-        });
-    </script> -->
-    
 </body>

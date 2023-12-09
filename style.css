@@ -1,17 +1,13 @@
 /* SETUP CSS USING TEMPLATE */
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* 1. Use a more-intuitive box-sizing model. */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
+/* 2. Remove default margin */
 * {
     margin: 0;
 }
@@ -22,8 +18,7 @@
   4. Improve text rendering
 */
 body {
-    /*background-color: #425037;*/
-    background: linear-gradient(90deg, #425037, #516444);
+    background-color: #425037;
     color: #DFBA8F;
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
@@ -32,24 +27,18 @@ body {
     margin-left: 48px;
     margin-right: 48px;
     min-width: 600px;
-    /*overflow: hidden;*/
 }
 
-/*
-  5. Improve media defaults
-*/
+/* 5. Improve media defaults */
 img,
 picture,
 video,
 canvas,
 svg {
     display: block;
-    /*max-width: 100%;*/
 }
 
-/*
-  6. Remove built-in form typography styles
-*/
+/* 6. Remove built-in form typography styles */
 input,
 button,
 textarea,
@@ -57,9 +46,7 @@ select {
     font: inherit;
 }
 
-/*
-  7. Avoid text overflows
-*/
+/* 7. Avoid text overflows */
 p,
 h1,
 h2,
@@ -70,17 +57,15 @@ h6 {
     overflow-wrap: break-word;
 }
 
-/*
-  8. Create a root stacking context
-*/
+/* 8. Create a root stacking context */
 #root,
 #__next {
     isolation: isolate;
 }
 
 
-/* GENERAL STYLES */
 
+/* GENERAL CSS */
 h1 {
     font-family: 'Chicle', cursive;
     font-size: 700%;
@@ -101,14 +86,13 @@ a {
 p {
     color: #DFBA8F;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding-bottom: 8px;
     padding-top: 8px;
 }
 
 
-/* NAVBAR STYLES */
-
+/* NAVBAR CSS */
 .navbar {
     align-items: center;
     padding-top: 16px;
@@ -118,14 +102,21 @@ p {
     justify-content: space-between;
 }
 
-.nav-links {
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
-.navbar a {
+.nav-list li {
+    margin: 0 0 0 15px;
+}
+
+.nav-list a {
     text-decoration: none;
-    text-align: center;
-    margin-left: 16px;
+    text-align: right;
     display: flex;
     float: right;
     font-size: 1.6rem;
@@ -133,11 +124,29 @@ p {
 
 .navbar a:hover {
     color: rgb(144, 174, 119);
+    transition: color 0.5s ease;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #dfba8f;
+    margin: 5px 0;
+}
+
+.contact-link {
+    padding-right: 0;
 }
 
 
 /* PAGE STYLES */
 
+/* this is a fade animation that makes each page's content fade in once it switches to a new page */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -146,6 +155,11 @@ p {
     100% {
         opacity: 1;
     }
+}
+
+.page-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 body {
@@ -174,42 +188,76 @@ h3 {
     text-align: left;
 }
 
+
+/* INDEX PAGE CSS (LANDING PAGE) */
+
+.homepage-hello {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 360%;
+}
+
+.main-heading {
+    padding-top: 10px;
+}
+
 .hannah-images {
     margin-right: 12px;
     flex: 1;
 }
 
-.page-content {
-    opacity: 0;
-    /* Initially, set the opacity to 0 */
-    transition: opacity 0.5s ease-in-out;
-    /* Add a transition effect */
-}
-
 .hannah-pic {
-    height: auto;
-    width: auto;
     max-width: 100%;
+    height: auto;
 }
 
-.creative-dev {
+
+/* ABOUT ME CSS */
+
+.lower-body-content {
+    padding: 10px;
+}
+
+.about-me-heading-left {
     flex: auto;
     display: inline;
-    margin-left: 50px;
+    margin-right: 70px;
+    margin-top: 10px;
+    text-align: left;
+    flex: 2;
+}
+
+.about-me-heading-right {
+    flex: auto;
+    display: inline;
+    margin-left: 70px;
+    margin-top: 10px;
     text-align: right;
     flex: 2;
 }
 
 .body-content {
-    margin-top: 24px;
+    margin-top: 50px;
 }
 
 .sound-designer {
     margin-top: 24px;
 }
 
+.about-links {
+    font-family: 'Nunito', sans-serif;
+    color: #ba8c58;
+    font-size: 1.6rem;
+}
 
-/* STYLES FOR PORTFOLIO PAGE */
+.about-links:hover {
+    color: rgb(144, 174, 119);
+    transition: color 0.5s ease;
+}
+
+
+
+/* PORTFOLIO PAGE CSS */
 
 .portfolio {
     display: flex;
@@ -271,14 +319,17 @@ h3 {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    padding: 10px;
+    padding: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: #ba8c58;
     transition: background-color 0.3s;
-    border-radius: 10px;
+    border-radius: 40px;
 }
 
 .portfolio-item a:hover {
     background-color: #8aab81;
+    transition: color 0.5s ease;
 }
 
 .category-links {
@@ -292,17 +343,20 @@ h3 {
 
 .category-links a {
     text-decoration: none;
-    margin-right: 16px;
     font-size: 1.6rem;
-    padding: 4px;
+    padding-right: 12px;
+    padding-left: 12px;
 }
 
 .category-links a:hover {
-    background-color: #ba8c5857;
-    transition: background-color 0.3s;
-    border-radius: 10px;
+    background-color: rgba(144, 174, 119, 0.162);
+    transition: background-color 0.5s ease;
+    border-radius: 40px;
 
 }
+
+
+/* CONTACT CSS */
 
 .contact-body {
     overflow-x: hidden;
@@ -313,17 +367,34 @@ h3 {
     margin: 16px auto;
 }
 
-.email-logo,
-.linkedin-logo,
-.soundcloud-logo,
-.spotify-logo {
-    font-size: 200%;
+.get-in-touch {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 360%;
+    text-align: center;
+}
+
+.centered {
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .icons {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 6vh;
+    width: 100%;
+}
+
+.email-logo,
+.linkedin-logo,
+.soundcloud-logo,
+.spotify-logo {
+    font-size: 150%;
 }
 
 .fly-container {
@@ -349,13 +420,13 @@ h3 {
 @keyframes flyAnimation {
     to {
         left: 100vw;
-        /* Move to the right edge of the screen */
     }
 }
 
-/* STYLES FOR CONTACT */
 
-/* Media query for smaller screens */
+/* Media query for smaller screens 
+    This just makes the number of 'panels' in the portfolio
+    2 items wide when a certain screen width */
 @media (max-width: 1300px) {
     .portfolio-item {
         width: 49%;
@@ -363,20 +434,52 @@ h3 {
 }
 
 /* MEDIA TAGS FOR MOBILE SCREEN SIZE ADJUSTMENTS */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     /* Center all elements vertically and stack them */
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 100%;
+        background-color: #232b1e9e;
+        text-align: center;
+        z-index: 99999;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        /* Define the transition property */
+    }
+
+    .home-link {
+        order: -1;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 
     /* Center the heading */
     h,
-    .sound-designer {
+    .about-me-heading-left,
+    .about-me-heading-right {
         text-align: center;
         margin: 0 auto;
     }
 
-    /* Increase font size and padding for better readability */
-    .navbar {
-        padding: 10px;
-        font-size: larger;
+    .homepage-hello {
+        text-align: center !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
 
     /* Center the image and maintain a constant height and width */
@@ -394,7 +497,10 @@ h3 {
         height: 400px;
         /* Adjust the height to your desired size */
         max-width: 100%;
+        max-height: 100%;
         height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     /* Center the h2 and description text */
@@ -408,17 +514,6 @@ h3 {
         flex-wrap: wrap;
         display: inline-block;
         margin-top: 0px;
-    }
-
-    .navbar a {
-        font-size: 2rem;
-    }
-
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 16vh;
     }
 
     /* Increase text size for portfolio items */
@@ -438,12 +533,15 @@ h3 {
     }
 
     .portfolio-item a {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .category-links a {
         font-size: 1.6rem;
     }
 
+    .flying-image {
+        top: 10%;
+    }
 
 }

@@ -14,36 +14,38 @@
 
 <body>
     <nav class="navbar">
-        <div class="nav-logo">
-            <a href="index.html">HANNAH LARSEN</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
-        <div class="nav-links">
-            <a href=portfolio.html>PORTFOLIO </a>
-            <a href=contact.html>CONTACT</a>
-        </div>
+        <a class="home-link" href="index.html" style="font-size: 1.6rem; text-decoration: none;">hannah larsen</a>
+        <ul class="nav-list">
+            <li><a class="about-link" href="about.html">about</a></li>
+            <li><a class="portfolio-link" href="portfolio.html">portfolio</a></li>
+            <li><a class="contact-link" href="contact.html">contact</a></li>
+        </ul>
     </nav>
-
-    <div class="heading">
-        <h class="sound-designer">
-            SOUND DESIGNER
-        </h>
-    </div>
 
     <div class="body-content">
         <div class="hannah-images">
             <img class="hannah-pic" src="assets-new/picture.png">
         </div>
 
-        <div class="creative-dev">
-            <h2>CREATIVE DEVELOPER</h2>
-            <p class="description">I AM A <span style="color:rgb(144, 174, 119);">SOUND DESIGNER</span> BASED IN KINGSTON, ONTARIO
-                SPECIALIZING IN AUDIO DEVELOPMENT FOR VIDEO GAMES 
-                AND ELECTROACOUSTIC SOUND PRODUCTION.
-                I GRADUATED WITH A BACHELOR OF ARTS IN COMPUTING 
-                AND CREATIVE ARTS FROM QUEEN'S UNIVERSITY AND WAS
-                THE 2023 RECIPIENT OF THE ISTVAN PRIZE IN ELECTROACOUSTICS.
+        <div class="about-me-heading-right">
+            <h class="homepage-hello">Hello, world!</h>
+            <p class="description">
+                My name is Hannah. I'm a sound designer and front-end developer currently based in Kingston, Ontario.
+                Click <a class="about-links" href="about.html">here</a> to learn more about what I'm all about. <br><br>
+                Note: This site is still under construction!
+            </p>
+
+            <p>
+                
             </p>
         </div>
     </div>
+
+    <script src="navbar.js"></script>
+        
 </body>

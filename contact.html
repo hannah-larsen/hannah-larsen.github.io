@@ -13,22 +13,30 @@
 </head>
 
 <body class="contact-body">
-
     <nav class="navbar">
-        <div class="nav-logo">
-            <a href="index.html">HANNAH LARSEN</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
-        <div class="nav-links">
-            <a href=portfolio.html>PORTFOLIO </a>
-            <a href=contact.html>CONTACT</a>
-        </div>
+        <a class="home-link" href="index.html" style="font-size: 1.6rem; text-decoration: none;">hannah larsen</a>
+        <ul class="nav-list">
+            <li><a class="about-link" href="about.html">about</a></li>
+            <li><a class="portfolio-link" href="portfolio.html">portfolio</a></li>
+            <li><a class="contact-link" href="contact.html">contact</a></li>
+        </ul>
     </nav>
 
-    <div>
-        <h1 class="contact-text">
-            LETS GET IN TOUCH!
-        </h1>
+    <div class="centered">
+        <h class="get-in-touch">
+            Let's get in touch!
+        </h>
+    </div>
+
+    <div class="centered">
+        <p class="description">
+            Click one of the icons below or shoot me an email at larsnmusic@gmail.com
+        </p>
     </div>
 
     <div class="icons">
@@ -52,6 +60,8 @@
     <div class="fly-container">
         <img class="flying-image" src="assets-new/airplane.png" alt="Flying Image">
     </div>
+
+    <script src="navbar.js"></script>
 
     <!-- THIS SCRIPT MAKES THE PAPER AIRPLANE NOT RESPAWN ONCE ITS FLOWN ACROSS THE SCREEN -->
     <script>
