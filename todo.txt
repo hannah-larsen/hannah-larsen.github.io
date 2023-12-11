@@ -1,20 +1,11 @@
 Portfolio Website To-Do:
 
 general:
-- double check for accessibility - make sure images have alt text, etc...
-- figure out font issue - keep it all lowercase? use diff body font?
-- add another colour into theme for accent colour?
-- FIX THE DARN NAVBAR MOBILE MENU IT LOOKS SO BAD OMG
+- add animation to navbar and fix formatting of it to make it look cleaner
 
 index.html
-- hannah-pic keeps getting stretched weird while screen is resizing
+- add animated "hello world" idea to this page
 
 portfolio.html
-- fix the issue with clicking on portfolio 'frames' and they dont do the hover effect after being clicked
 - make the filter button options as actual clickable buttons instead of links (make it rounded edges)
 and have a shadow when user hovers but make it look clean
-
-contact.html
-- make logos bigger/diff colour when user hovers
-- have a contact form (like when people enter their email, subject and body) but right on the page
-- make paper airplane colours to match theme

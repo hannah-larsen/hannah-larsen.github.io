@@ -24,8 +24,8 @@
         <a class="home-link" href="index.html" style="font-size: 1.6rem; text-decoration: none;">hannah larsen</a>
         <ul class="nav-list">
             <li><a class="about-link" href="about.html">about</a></li>
-            <li><a class="portfolio-link" href="portfolio.html">portfolio</a></li>
-            <li><a class="contact-link" href="contact.html">contact</a></li>
+            <li class="secondNav"><a class="portfolio-link" href="portfolio.html">portfolio</a></li>
+            <li class="thirdNav"><a class="contact-link" href="contact.html">contact</a></li>
         </ul>
     </nav>
 
@@ -79,64 +79,7 @@
     </div>
 
     <script src="navbar.js"></script>
-
-    <script>
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-        portfolioItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                const overlay = item.querySelector('.overlay');
-                if (overlay.style.opacity === "0" || overlay.style.opacity === "") {
-                    overlay.style.opacity = 1;
-                } else {
-                    overlay.style.opacity = 0;
-                }
-            });
-        });
-    
-        const categoryLinks = document.querySelectorAll('.category-link');
-
-        categoryLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const selectedCategory = link.getAttribute('data-category');
-
-            // Hide all portfolio items
-            portfolioItems.forEach((item) => {
-                item.style.opacity = 0; // Hide the item
-            });
-
-            // Define the fade-in function
-            const fadeIn = (element, duration) => {
-                let opacity = 0;
-                const interval = 10; // Milliseconds
-                const increment = (interval / duration);
-                element.style.opacity = 0;
-                element.style.display = 'block';
-
-                const animate = () => {
-                    opacity += increment;
-                    if (opacity >= 1) {
-                        element.style.opacity = 1;
-                    } else {
-                        element.style.opacity = opacity;
-                        setTimeout(animate, interval);
-                    }
-                };
-
-                animate();
-            };
-
-            // Show only the items of the selected category with a fade-in effect
-            portfolioItems.forEach((item) => {
-                if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
-                    fadeIn(item, 500); // Show the item with a fade-in effect (500 milliseconds duration)
-                } else {
-                    item.style.display = 'none'; // Hide the item by setting its display to 'none'
-                }
-            });
-        });
-    });
-    </script>
+    <script src="portfolio-items-hover.js"></script>
+    <script src="portfolio-categories.js"></script>
 
 </body>
