@@ -465,6 +465,25 @@ h3 {
     /* Adjust duration as needed */
 }
 
+/* FOOTER CSS */
+footer {
+    margin-top: 100px;
+    margin-bottom: 0;
+    border-top: 1px solid #DFBA8F;
+}
+
+.footer-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-text {
+    color: #dfba8fa1;
+    font-size: 0.8rem;
+}
+
 @keyframes flyAnimation {
     to {
         left: 100vw;
@@ -483,6 +502,11 @@ h3 {
 
 /* For super small phone screens */
 @media (max-width: 500px) {
+    body {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
     p {
         font-size: 1.2rem;
     }
@@ -494,9 +518,6 @@ h3 {
     h2 {
         font-size: 3.6rem;
     }
-
-
-
 }
 
 /* MEDIA TAGS FOR GENERAL MOBILE SCREEN SIZE ADJUSTMENTS */

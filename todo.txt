@@ -1,7 +1,4 @@
-Portfolio Website To-Do:
-
-general:
-- add animation to navbar and fix formatting of it to make it look cleaner
+Portfolio Website Ideas:
 
 index.html
 - add animated "hello world" idea to this page
