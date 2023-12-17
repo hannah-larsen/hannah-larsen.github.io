@@ -268,8 +268,9 @@ h3 {
 
 .portfolio {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio-text {
@@ -281,11 +282,10 @@ h3 {
 .portfolio-item {
     width: 32%;
     background-color: #f0f0f0;
-    margin-top: 16px;
+    margin: 6px;
     overflow: hidden;
     position: relative;
     border-radius: 6px;
-    margin-bottom: 16px;
 }
 
 .portfolio-item img {
@@ -342,7 +342,8 @@ h3 {
 
 .category-links {
     margin: 16px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -395,7 +396,7 @@ h3 {
     width: 100%;
 }
 
-.email-logo,
+.github-logo,
 .linkedin-logo,
 .soundcloud-logo,
 .spotify-logo,
@@ -496,7 +497,7 @@ footer {
     2 items wide when a certain screen width */
 @media (max-width: 1300px) {
     .portfolio-item {
-        width: 49%;
+        width: 48%;
     }
 }
 
