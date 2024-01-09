@@ -514,6 +514,10 @@ footer {
     .portfolio-item {
         width: 48%;
     }
+
+    .music-item {
+        width: 46%;
+    }
 }
 
 /* For super small phone screens */
@@ -674,6 +678,7 @@ footer {
     .portfolio {
         justify-content: center;
     }
+
 
     .portfolio-item {
         min-width: 40%;
