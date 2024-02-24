@@ -123,7 +123,7 @@ p {
 }
 
 .navbar a:hover {
-    color: rgb(144, 174, 119);
+    color: #A4B191;
     transition: color 0.5s ease;
 }
 
@@ -188,8 +188,8 @@ h3 {
     text-align: left;
 }
 
-.nav-list a.active{
-    color:rgb(144, 174, 119);
+.nav-list a.active {
+    color: #A4B191;
 }
 
 /* INDEX PAGE CSS (LANDING PAGE) */
@@ -255,13 +255,13 @@ h3 {
 
 .about-links {
     font-family: 'Nunito', sans-serif;
-    color: #ba8c58;
+    color: #A4B191;
     font-size: 1.6rem;
     text-decoration: none;
 }
 
 .about-links:hover {
-    color: rgb(144, 174, 119);
+    color: #D9BF71;
     transition: color 0.5s ease;
 }
 
@@ -285,7 +285,7 @@ h3 {
 .portfolio-item {
     width: 32%;
     background-color: #f0f0f0;
-    margin: 6px;
+    margin: 8px;
     overflow: hidden;
     position: relative;
     border-radius: 6px;
@@ -363,6 +363,18 @@ h3 {
     background-color: rgba(144, 174, 119, 0.1);
     transition: background-color 0.5s ease;
     border-radius: 40px;
+}
+
+.space-upper {
+    padding-bottom: 30px;
+}
+
+.music-item {
+    width: 32%;
+    margin: 8px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
 }
 
 /* CONTACT CSS */
@@ -501,6 +513,16 @@ footer {
 @media (max-width: 1300px) {
     .portfolio-item {
         width: 48%;
+    }
+
+    .music-item {
+        width: 47%;
+    }
+}
+
+@media (max-width: 700px) {
+    .music-item {
+        width: 100%;
     }
 }
 
@@ -662,6 +684,7 @@ footer {
     .portfolio {
         justify-content: center;
     }
+
 
     .portfolio-item {
         min-width: 40%;
