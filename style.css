@@ -188,9 +188,9 @@ h3 {
     text-align: left;
 }
 
-.nav-list a.active {
-    color: #A4B191;
-}
+/*.nav-list a.active {
+    color: #8aab81;
+}*/
 
 /* INDEX PAGE CSS (LANDING PAGE) */
 
@@ -261,8 +261,35 @@ h3 {
 }
 
 .about-links:hover {
-    color: #D9BF71;
+    color: #dfba8f;
     transition: color 0.5s ease;
+}
+
+.hover-underline {
+    font-family: 'Nunito', sans-serif;
+    color: #8aab81;
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 10%;
+    left: 0;
+    background-color: #8aab81;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
