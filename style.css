@@ -18,15 +18,14 @@
   4. Improve text rendering
 */
 body {
-    background-color: #425037;
-    color: #DFBA8F;
+    background-color: var(--background);
+    color: var(--primary);
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     margin: 24px;
     margin-left: 48px;
     margin-right: 48px;
-    /*min-width: 600px;*/
 }
 
 /* 5. Improve media defaults */
@@ -64,8 +63,18 @@ h6 {
 }
 
 
-
 /* GENERAL CSS */
+* {
+    /* OLD COLOURS
+    background: #425037
+    text: #DFBA8F
+    hover/highlight: #8aab81
+    */
+    --background: #3A4D39;
+    --primary: #f0ddb0;
+    --primary-link: #b3c5af;
+}
+
 h1 {
     font-family: 'Chicle', cursive;
     font-size: 700%;
@@ -78,14 +87,12 @@ div {
 }
 
 a {
-    color: #DFBA8F;
-    font-family: 'Nunito', sans-serif;
+    color: var(--primary);
     font-size: larger;
 }
 
 p {
-    color: #DFBA8F;
-    font-family: 'Nunito', sans-serif;
+    color: var(--primary);
     font-size: 1.6rem;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -97,7 +104,7 @@ p {
     align-items: center;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #DFBA8F;
+    border-bottom: 1px solid var(--primary);
     display: flex;
     justify-content: space-between;
 }
@@ -123,7 +130,7 @@ p {
 }
 
 .navbar a:hover {
-    color: #A4B191;
+    color: var(--primary-link);
     transition: color 0.5s ease;
 }
 
@@ -135,7 +142,7 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #dfba8f;
+    background-color: var(--primary);
     margin: 5px 0;
 }
 
@@ -145,8 +152,7 @@ p {
 
 
 /* PAGE STYLES */
-
-/* this is a fade animation that makes each page's content fade in once it switches to a new page */
+/* This is a fade animation that makes each page's content fade in once it switches to a new page */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -188,12 +194,8 @@ h3 {
     text-align: left;
 }
 
-/*.nav-list a.active {
-    color: #8aab81;
-}*/
 
 /* INDEX PAGE CSS (LANDING PAGE) */
-
 .homepage-hello {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
@@ -216,13 +218,12 @@ h3 {
     max-width: 80%;
     height: auto;
     width: 100%;
-    /* Adjust this percentage based on your preference */
     margin: 0;
-    /* Center the image */
 }
 
-/* ABOUT ME CSS */
 
+
+/* ABOUT ME CSS */
 .lower-body-content {
     padding: 10px;
 }
@@ -255,19 +256,21 @@ h3 {
 
 .about-links {
     font-family: 'Nunito', sans-serif;
-    color: #A4B191;
+    color: var(--primary-link);
     font-size: 1.6rem;
     text-decoration: none;
 }
 
 .about-links:hover {
-    color: #dfba8f;
+    color: var(--primary);
     transition: color 0.5s ease;
 }
 
+
+/* ANIMATIONS FOR HOVERING A LINK AND LINE SPAWNS UNDERNEATH IT AND FADES */
 .hover-underline {
     font-family: 'Nunito', sans-serif;
-    color: #8aab81;
+    color: var(--primary-link);
     font-size: 1.6rem;
     text-decoration: none;
     display: inline-block;
@@ -282,7 +285,7 @@ h3 {
     height: 1px;
     bottom: 10%;
     left: 0;
-    background-color: #8aab81;
+    background-color: var(--primary-link);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -295,117 +298,51 @@ h3 {
 
 
 /* PORTFOLIO PAGE CSS */
-
 .portfolio {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.portfolio-text {
-    margin: 16px;
-    font-size: 1.2rem;
-    text-align: center;
+    margin-top: 24px;
 }
 
 .portfolio-item {
     width: 32%;
-    background-color: #f0f0f0;
+    background-color: #ece9e021;
     margin: 8px;
     overflow: hidden;
     position: relative;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-item img {
     width: 100%;
-    height: 300px;
-    display: block;
-    background-color: #425037;
-    object-fit: cover;
+    padding: 16px;
+    padding-bottom: 0;
+    height: auto;
 }
 
-.portfolio-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1c2d1ad0;
-    color: #fff;
+.portfolio-text {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--primary-link);
+    margin: 8px;
+}
+
+.portfolio-lower {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
 }
 
-.portfolio-item .overlay a {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+.portfolio-skills-text {
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--primary-link);
 }
 
-.portfolio-item:hover .overlay {
-    opacity: 1;
-}
-
-.portfolio-item a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 12px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    background-color: #ba8c58;
-    transition: background-color 0.3s;
-    border-radius: 40px;
-}
-
-.portfolio-item a:hover {
-    background-color: #8aab81;
-    transition: color 0.5s ease;
-}
-
-.category-links {
-    margin: 16px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.category-links a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-.category-links a:hover {
-    background-color: rgba(144, 174, 119, 0.1);
-    transition: background-color 0.5s ease;
-    border-radius: 40px;
-}
-
-.space-upper {
-    padding-bottom: 30px;
-}
-
-.music-item {
-    width: 32%;
-    margin: 8px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 6px;
-}
 
 /* CONTACT CSS */
-
 .contact-body {
     overflow-x: hidden;
 }
@@ -447,90 +384,54 @@ h3 {
 }
 
 .icons a i {
-    color: #dfba8f;
-    /* Default color */
-    /* Add a smooth transition for a better visual effect */
+    color: var(--primary);
     opacity: 0;
-    /* Set initial opacity to 0 */
     transition: opacity 0.5s ease-in-out;
     transition: color 0.3s ease-in;
-    /* Add a smooth transition for opacity */
 }
 
 .icons a:hover i {
-    color: #8aab81;
-    /* Change the color on hover */
+    color: var(--primary-link);
 }
 
 .icons a:nth-child(1) i {
     animation: fadeIn 0.5s ease-in-out 0.5s forwards;
-    /* Delay the first icon */
 }
 
 .icons a:nth-child(2) i {
     animation: fadeIn 0.5s ease-in-out 0.7s forwards;
-    /* Delay the second icon */
 }
 
 .icons a:nth-child(3) i {
     animation: fadeIn 0.5s ease-in-out 0.9s forwards;
-    /* Delay the third icon */
 }
 
 .icons a:nth-child(4) i {
     animation: fadeIn 0.5s ease-in-out 1.1s forwards;
-    /* Delay the fourth icon */
 }
 
 .icons a:nth-child(5) i {
     animation: fadeIn 0.5s ease-in-out 1.3s forwards;
-    /* Delay the fourth icon */
 }
 
-.fly-container {
-    position: relative;
-    width: 100vw;
-    height: 30vh;
-    margin-top: 6px;
-}
-
-.flying-image {
-    height: 80px;
-    width: auto;
-    position: absolute;
-    top: 90%;
-    /* Initial vertical position */
-    left: 0;
-    /* Initial horizontal position */
-    transform: translate(-50%, -50%);
-    /* Center the image */
-    animation: flyAnimation 10s linear;
-    /* Adjust duration as needed */
-}
 
 /* FOOTER CSS */
 footer {
     margin-top: 100px;
     margin-bottom: 0;
-    border-top: 1px solid #DFBA8F;
+    border-top: 1px solid var(--primary);
 }
 
 .footer-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .footer-text {
-    color: #dfba8fa1;
+    color: var(--primary);
     font-size: 0.8rem;
-}
-
-@keyframes flyAnimation {
-    to {
-        left: 100vw;
-    }
 }
 
 
@@ -540,16 +441,6 @@ footer {
 @media (max-width: 1300px) {
     .portfolio-item {
         width: 48%;
-    }
-
-    .music-item {
-        width: 47%;
-    }
-}
-
-@media (max-width: 700px) {
-    .music-item {
-        width: 100%;
     }
 }
 
@@ -574,7 +465,7 @@ footer {
 }
 
 /* MEDIA TAGS FOR GENERAL MOBILE SCREEN SIZE ADJUSTMENTS */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     /* Center all elements vertically and stack them */
 
     @keyframes fadeIn2 {
@@ -601,8 +492,7 @@ footer {
         bottom: 0px;
         right: 0;
         width: 100%;
-        background-color: #425037;
-        /* color i had before: 232b1e */
+        background-color: var(--background);
         text-align: center;
         z-index: 99999;
         opacity: 0;
@@ -622,7 +512,7 @@ footer {
     }
 
     .nav-list li:hover {
-        color: rgb(144, 174, 119);
+        color: var(--primary-link);
         transition: color 0.5s ease;
     }
 
@@ -666,20 +556,15 @@ footer {
         display: block !important;
     }
 
-    /* Center the image and maintain a constant height and width */
     .hannah-images {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        margin: 0 auto;
-        text-align: center;
+        margin: 0;
     }
 
     .hannah-pic {
         width: 400px;
-        /* Adjust the width to your desired size */
         height: 400px;
-        /* Adjust the height to your desired size */
         max-width: 90%;
         max-height: 90%;
         height: auto;
@@ -700,37 +585,15 @@ footer {
         margin-top: 0px;
     }
 
-    /* Increase text size for portfolio items */
-    .portfolio-text {
-        font-size: 1.2rem;
-        max-width: 100%;
-        /* Adjust the font size as needed */
-    }
-
     /* Display one portfolio item per row on mobile */
     .portfolio {
         justify-content: center;
+        align-items: center;
     }
 
-
     .portfolio-item {
-        min-width: 40%;
         width: 100%;
         height: auto;
         margin-bottom: 16px;
     }
-
-    .portfolio-item a {
-        font-size: 1.2rem;
-        margin-top: 8px;
-    }
-
-    .category-links a {
-        font-size: 1.6rem;
-    }
-
-    .flying-image {
-        top: 10%;
-    }
-
 }

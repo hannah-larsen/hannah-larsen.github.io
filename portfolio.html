@@ -17,6 +17,33 @@
     <meta property="og:image" content="assets-new/favicon.png"> 
     <meta property="og:url" content="https://hannah-larsen.github.io"> 
     <title>Portfolio | Hannah Larsen</title>
+
+    <style>
+        .container {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+        }
+    
+        .column {
+          flex-basis: 30%;
+          background-color: #f2f2f2;
+          padding: 20px;
+          margin: 10px;
+          border-radius: 10px;
+        }
+    
+        .column img {
+          width: 100%;
+          border-radius: 1px;
+        }
+    
+        @media screen and (max-width: 768px) {
+          .container {
+            flex-wrap: wrap;
+          }
+        }
+      </style>
 </head>
 
 <body>
@@ -34,7 +61,69 @@
         </ul>
     </nav>
 
-    
+    <div class="portfolio">
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a target="_blank" href="https://www.hexcodle.com"><img src="assets-new/hexcodle_og2.png" alt="Hexcodle"></a>
+            </div>
+            <div class="portfolio-lower">
+                <p class="portfolio-text">
+                    Hexcodle is a daily wordle-style game where users guess a daily generated
+                    hex code. Hexcodle has gained over 30,000 users since deployment in August 2023. Developed by Hannah Larsen and Ekim Karabey.
+                </p>
+                <p class="portfolio-skills-text">
+                    React  -  Node.js  -  Figma
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a target="_blank" href="https://drive.google.com/file/d/1bUXP0_AiHrQvjEKk9pqYiFlnI8VOX6Y2/view?usp=sharing"><img src="assets-new/racetrap-forest.png" alt="RaceTrap Forest Audio Link"></a>
+            </div>
+            <div class="portfolio-lower">
+                <p class="portfolio-text">
+                    Audio created by Hannah Larsen with video demo of GnomeFire Labs' 
+                    [beta version] Racetrap game, forest level. 
+                </p>
+                <p class="portfolio-skills-text">
+                    Ableton Live 11 - Sampling - Video Game OST
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a target="_blank" href="https://drive.google.com/file/d/1L4OTUPHFlsamSvq24ya0qbw_RH46-eIV/view?usp=sharing"><img src="assets-new/racetrap-mainmenu.png" alt="RaceTrap Main Menu Audio Link"></a>
+            </div>
+            <div class="portfolio-lower">
+                <p class="portfolio-text">
+                    Audio created by Hannah Larsen with video demo of GnomeFire Labs' 
+                    [beta version] Racetrap game, main menu screen. 
+                </p>
+                <p class="portfolio-skills-text">
+                    Ableton Live 11 - Sampling - Video Game OST
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a target="_blank" href="https://youtu.be/W_nURGJc8No?si=Sv1CccMyJqQlsGY0&t=583"><img src="assets-new/mosaic2.png" alt="Queen's Mosaic Concert, February 2023"></a>
+            </div>
+            <div class="portfolio-lower">
+                <p class="portfolio-text">Performing my originally composed piece titled "Eminence" at the Queen's University February 2023 Mosaic Concert 
+                    at the Isabel Bader Centre.
+                </p>
+                <p class="portfolio-skills-text">
+                    Ableton Live 11  -  Surge XT
+                </p>
+            </div>
+        </div>
+
+        <!-- Add more portfolio items as needed -->
+    </div>
 
     <script src="navbar.js"></script>
     <script src="page-active.js"></script>
