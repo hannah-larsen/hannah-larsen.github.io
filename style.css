@@ -359,6 +359,11 @@ h3 {
     text-align: center;
 }
 
+.description2 {
+    font-size: 110%;
+    font-style: italic;
+}
+
 .centered {
     display: block;
     text-align: center;
@@ -574,7 +579,8 @@ footer {
 
     /* Center the h2 and description text */
     h2,
-    .description {
+    .description,
+    .description2 {
         text-align: center;
         margin: 0 auto;
     }
