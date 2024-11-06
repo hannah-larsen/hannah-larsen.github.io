@@ -438,10 +438,8 @@ h3 {
 /* MUSIC PAGE CSS */
 
 .music-body {
-    background: linear-gradient(#4a3b4e, #77617e)
+    background: linear-gradient(#4a3b4e, #77617e);
 }
-
-
 
 .audio-embeds {
     display: flex;
@@ -449,6 +447,12 @@ h3 {
     align-items: center;
     width: 100%;
     margin: 10px;
+}
+
+.audio-embeds audio {
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .music-page-text {
@@ -612,11 +616,15 @@ footer {
         bottom: 0px;
         right: 0;
         width: 100%;
-        background-color: var(--background);
+        background: var(--background);
         text-align: center;
         z-index: 99999;
         opacity: 0;
         animation: fadeIn2 0.3s ease;
+    }
+
+    .nav-list.purple {
+        background: linear-gradient(#4f3f53, #77617e);
     }
 
     .home-link {
