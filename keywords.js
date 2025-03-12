@@ -3,6 +3,7 @@ const keywords = [
   "marketing specialist",
   "sound designer",
   "creative developer",
+  "multimedia designer",
 ];
 let currentKeywordIndex = 0;
 let charIndex = 0;
