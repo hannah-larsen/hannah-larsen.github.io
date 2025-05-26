@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import { Mansalva } from "next/font/google";
-import NavBar from "@/components/navbar";
+import NavBar from "@/components/Navbar";
 import LoadingWrapper from "@/components/LoadingWrapper";
 
 const mansalva = Mansalva({
