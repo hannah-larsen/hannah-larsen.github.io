@@ -173,3 +173,40 @@
 .font-mansalva {
   font-family: 'Mansalva', cursive !important;
 }
+
+/* CUSTOM COLOUR HOVER ANIMATIONS */
+
+.portfolio-link {
+  color: var(--color-amber-50);
+  transition: color 0.3s ease;
+}
+
+.portfolio-link:hover {
+  color: var(--color-lightg);
+}
+
+.social-button {
+  background-color: var(--color-amber-50);
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: var(--color-lightg);
+}
+
+.link-button {
+  background-color: var(--color-amber-50);
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: var(--color-lightg);
+}
+
+.project-card {
+  transition: box-shadow 300ms;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 25px #214024;
+}

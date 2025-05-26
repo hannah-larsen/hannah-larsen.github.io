@@ -12,20 +12,20 @@ export default function HomePage() {
         />
         <div className="flex justify-center mt-2 space-x-4">
           <a
-            className="w-14 h-14 rounded-full bg-amber-50 hover:bg-lightg transition flex items-center justify-center"
+            className="social-button w-14 h-14 rounded-full flex items-center justify-center"
             href="mailto:hannah.larsen62@gmail.com"
           >
             <Mail className="text-darkg w-6 h-6" />
           </a>
           <a
-            className="w-14 h-14 rounded-full bg-amber-50 hover:bg-lightg transition flex items-center justify-center"
+            className="social-button w-14 h-14 rounded-full flex items-center justify-center"
             href="https://www.linkedin.com/in/hannahlars"
             target="_blank"
           >
             <Linkedin className="text-darkg w-6 h-6" />
           </a>
           <a
-            className="w-14 h-14 rounded-full bg-amber-50 hover:bg-lightg transition flex items-center justify-center"
+            className="social-button w-14 h-14 rounded-full flex items-center justify-center"
             href="https://www.instagram.com/larsn.wav"
             target="_blank"
           >
@@ -44,7 +44,7 @@ export default function HomePage() {
         <hr className="border-t border-amber-50 my-4" />
         <h2 className="text-xl md:text-2xl font-mansalva text-amber-50">
           <a
-            className="portfolio-link hover:text-lightg transition"
+            className="portfolio-link"
             href="/portfolio"
           >
             check out my work →

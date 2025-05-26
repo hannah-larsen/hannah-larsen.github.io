@@ -21,7 +21,7 @@ export default function ProjectCard({ title, heading, subhead, images, descripti
   const showArrows = images.length > 1;
 
   return (
-    <div className="bg-darkg/95 rounded-3xl p-8 shadow-lg flex flex-col gap-6 w-full hover:shadow-[0_0_25px_#214024] transition duration-300">
+    <div className="project-card bg-darkg/95 rounded-3xl p-8 shadow-lg flex flex-col gap-6 w-full">
       <h2 className="text-4xl text-amber-50" style={{ fontFamily: "var(--font-mansalva)" }}>{title}</h2>
       <h2 className="text-xl text-amber-50" style={{ fontFamily: "var(--font-mansalva)" }}>{heading}</h2>
       <h3 className="text-md text-amber-50" style={{ fontFamily: "var(--font-inter)" }}>{subhead}</h3>
@@ -66,7 +66,7 @@ export default function ProjectCard({ title, heading, subhead, images, descripti
           href={websiteLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-center text-darkg bg-amber-50 hover:bg-lightg transition px-4 py-2 rounded-full"
+          className="link-button text-center text-darkg px-4 py-2 rounded-full"
         >
           visit link
         </a>
