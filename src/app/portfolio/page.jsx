@@ -11,6 +11,15 @@ const projects = [
     websiteLink: "https://elementfire.com/blogs/articles/introducing-the-motorsport-bundle",
   },
   {
+    title: "Element Social Media Posts",
+    heading: "Element Fire Extinguishers",
+    subhead: "I designed social media graphics for Element with a focus on a minimalist, Euro-inspired aesthetic. The content ranged from weekly blog promotions to brand collaborations and shopping events like holiday sales. Each post needed to feel clean and on-brand while still standing out in a crowded feed.",
+    images: ["/stelvio-social1.png", "/stelvio-social2.png", "/stelvio-social4.png", "/stelvio-social3.png"],
+    description: "This taught me how to design for a wide range of content types while maintaining a cohesive brand look. I also sharpened my technical skills in Photoshop, especially when it came to styling type, working with mockups, and creating templates for faster turnaround.",
+    skills: "Photoshop • Shopify",
+    websiteLink: "",
+  },
+  {
     title: "Hexcodle",
     heading: "Personal Project — Web Application",
     subhead: "Hexcodle is a color-guessing game inspired by Wordle, where players attempt to guess a hex code in just a few tries. The goal was to create an engaging, interactive web app that blends design knowledge with puzzle-solving.",
@@ -20,13 +29,13 @@ const projects = [
     websiteLink: "https://www.hexcodle.com",
   },
   {
-    title: "Apartment Coffee Shop Vlog",
-    heading: "Personal Project - Youtube Video",
-    subhead: "This was a personal video project where I documented the process of transforming my apartment into a pop-up coffee shop for a day. I had hosted a few of these events before, but this was the first time I filmed the full setup and experience, both as a way to share it with friends and to explore a new creative medium.",
-    images: ["/youtube1.png"],
-    description: "This project was a great opportunity to explore content creation and video editing from start to finish. I learned about camera setup, gathering effective b-roll, and structuring clips into a cohesive story. It also gave me insight into the YouTube upload process, including thumbnails, audio levels, and pacing for an online audience.",
-    skills: "CapCut • Photoshop • Ableton Live",
-    websiteLink: "https://www.youtube.com/watch?v=TDPZfCnWCEw",
+    title: "Triple Siege TCG Illustrations",
+    heading: "Triple Siege - Virtual Card Game",
+    subhead: "Working closely alongside the project manager & co-artist, I illustrated various virtual cards. I worked off prompts and visual references to create funky fictional characters in Procreate. This project is ongoing!",
+    images: ["/triple-2.png", "/triple-1.png", "/triple-3.png"],
+    description: "My first big illustration project. I learned how to adapt my artistic style to match the game's aesthetic. I collaborated with team members on daily feedback loops to ensure each final illustration matches the creative vision.",
+    skills: "Procreate",
+    websiteLink: "https://triple-siege.vercel.app/",
   },
   {
     title: "COMPSA Circuit Branding",
@@ -46,6 +55,25 @@ const projects = [
     skills: "Canva • Figma",
     websiteLink: "",
   },
+   {
+    title: "Apartment Coffee Shop Vlog",
+    heading: "Personal Project - Youtube Video",
+    subhead: "This was a personal video project where I documented the process of transforming my apartment into a pop-up coffee shop for a day. I had hosted a few of these events before, but this was the first time I filmed the full setup and experience, both as a way to share it with friends and to explore a new creative medium.",
+    images: ["/youtube1.png"],
+    description: "This project was a great opportunity to explore content creation and video editing from start to finish. I learned about camera setup, gathering effective b-roll, and structuring clips into a cohesive story. It also gave me insight into the YouTube upload process, including thumbnails, audio levels, and pacing for an online audience.",
+    skills: "CapCut • Photoshop • Ableton Live",
+    websiteLink: "https://www.youtube.com/watch?v=TDPZfCnWCEw",
+  },
+  /*
+  {
+    title: "Audio + Sound Design Showcase",
+    heading: "Personal Project - Sound Design",
+    subhead: "While my portfolio focuses on design, I also explore sound as a creative tool. From crafting UI feedback and ambient loops to composing experimental audio for interactive projects, I love sonic implementation. This reel highlights how I bring a designer’s mindset to audio environments.",
+    images: [ ],
+    description: "",
+    skills: "",
+    websiteLink: "/reel",
+  }, */
 ];
 
 export default function PortfolioPage() {

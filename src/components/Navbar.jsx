@@ -12,7 +12,7 @@ export default function NavBar() {
     <nav className="bg-lightg fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-16 px-4">
       {isPortfolioPage && (
         <Link href="/" className="text-darkg font-mansalva text-2xl hover:bg-lightg transition">
-          ← back
+          home
         </Link>
       )}
 
