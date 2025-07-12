@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "Triple Siege TCG Illustrations",
-    heading: "Triple Siege - Virtual Card Game",
+    heading: "Triple Siege Trading Card Game",
     subhead: "Working closely alongside the project manager & co-artist, I illustrated various virtual cards. I worked off prompts and visual references to create funky fictional characters in Procreate. This project is ongoing!",
     images: ["/triple-2.png", "/triple-1.png", "/triple-3.png"],
     description: "My first big illustration project. I learned how to adapt my artistic style to match the game's aesthetic. I collaborated with team members on daily feedback loops to ensure each final illustration matches the creative vision.",
@@ -64,16 +64,15 @@ const projects = [
     skills: "CapCut • Photoshop • Ableton Live",
     websiteLink: "https://www.youtube.com/watch?v=TDPZfCnWCEw",
   },
-  /*
   {
-    title: "Audio + Sound Design Showcase",
-    heading: "Personal Project - Sound Design",
-    subhead: "While my portfolio focuses on design, I also explore sound as a creative tool. From crafting UI feedback and ambient loops to composing experimental audio for interactive projects, I love sonic implementation. This reel highlights how I bring a designer’s mindset to audio environments.",
-    images: [ ],
-    description: "",
-    skills: "",
-    websiteLink: "/reel",
-  }, */
+    title: "Audio Project Showcase",
+    heading: "Mini Portfolio - Personal & Client Projects",
+    subhead: "Though my main work lives in the visual world, sound is where I experiment, play, and push boundaries. Step into my sonic playground and explore how I build mood and meaning through audio.",
+    images: ["audio-image.png"],
+    description: "From crafting custom scores for games to generative music built with code, these projects blend tech, texture, and tone. It’s a space where field recordings meet synths, and storytelling happens through sound.",
+    skills: "Ableton Live • Reaper • Audacity",
+    websiteLink: "/audio",
+  },
 ];
 
 export default function PortfolioPage() {
