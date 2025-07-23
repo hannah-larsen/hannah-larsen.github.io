@@ -5,7 +5,7 @@ const projects = [
     title: "Motorsport Bundle Launch",
     heading: "Element Fire Extinguishers",
     subhead: "To promote Element’s new E100 roll bar mount, I helped launch the Motorsport Bundle tailored for racing enthusiasts. The bundle combined the new E100 mount with an E100 fire extinguisher and a custom Motorsport Decal Sheet.",
-    images: ["/stelvio6.png", "/stelvio7.png", "/stelvio4.png"],
+    images: ["/stelvio-motor.png", "/stelvio7.png", "/stelvio4.png"],
     description: "This was my first time creating print-ready decals with custom cut lines, which was a fun technical challenge. In addition to the decals, I did product photography, created social media graphics, wrote a blog post & prepped an email campaign.",
     skills: "Illustrator • Photoshop • Shopify • Brevo",
     websiteLink: "https://elementfire.com/blogs/articles/introducing-the-motorsport-bundle",
